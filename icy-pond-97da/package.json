@@ -1,0 +1,21 @@
+{
+  "name": "yellow-bonus-97e1",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240208.0",
+    "typescript": "^5.0.4",
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "0xsequence": "^1.8.7",
+    "@0xsequence/auth": "^1.8.7",
+    "@0xsequence/network": "^1.8.7",
+    "ethers": "5.7.2"
+  }
+}
