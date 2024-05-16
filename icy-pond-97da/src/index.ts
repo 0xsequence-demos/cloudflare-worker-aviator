@@ -70,15 +70,15 @@ async function handleRequest(request: Request, env: Env, ctx: ExecutionContext):
 
 
 const getBlockNumber = async (chainId: string, request: Request): Promise<number> => {
-	const nodeUrl = `https://next-nodes.sequence.app/${chainId}`
+	const nodeUrl = `https://nodes.sequence.app/${chainId}`
 	const provider = new ethers.providers.JsonRpcProvider({ url: nodeUrl, skipFetchSetup: true })
 	return await provider.getBlockNumber()
 }
 
 const callContract = async (request: Request, env: Env, address: string, tokenId: number): Promise<ethers.providers.TransactionResponse> => {
 
-	const nodeUrl = `https://next-nodes.sequence.app/${env.CHAIN_HANDLE}`
-	const relayerUrl = `https://next-${env.CHAIN_HANDLE}-relayer.sequence.app`
+	const nodeUrl = `https://nodes.sequence.app/${env.CHAIN_HANDLE}`
+	const relayerUrl = `https://${env.CHAIN_HANDLE}-relayer.sequence.app`
 	const provider = new ethers.providers.JsonRpcProvider({ url: nodeUrl, skipFetchSetup: true })
     const contractAddress = env.CONTRACT_ADDRESS
 
